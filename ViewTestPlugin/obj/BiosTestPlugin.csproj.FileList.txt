@@ -1,0 +1,12 @@
+..\Solarium\bin\Debug\plugins\BiosTestPlugin.dll
+..\Solarium\bin\Debug\plugins\BiosTestPlugin.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ViewTestPlugin.ViewTestPluginView.resources
+obj\Debug\BiosTestPlugin.csproj.GenerateResource.Cache
+obj\Debug\BiosTestPlugin.dll
+obj\Debug\BiosTestPlugin.pdb
+bin\Release\BiosTestPlugin.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\ViewTestPlugin.ViewTestPluginView.resources
+obj\Release\BiosTestPlugin.csproj.GenerateResource.Cache
+obj\Release\BiosTestPlugin.dll

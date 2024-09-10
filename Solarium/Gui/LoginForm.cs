@@ -1,0 +1,188 @@
+﻿/*
+ * Created by SharpDevelop.
+ * User: Pablo
+ * Date: 2007-09-11
+ * Time: 23:04
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data.Odbc;
+using System.Data.Common;
+
+using Solarium.Config;
+using Solarium.Db.QueryTools;
+using Solarium.Frame;
+using Solarium.Utils;
+
+namespace Solarium.Gui
+{
+	/// <summary>
+	/// Description of LoginForm.
+	/// </summary>
+	public partial class LoginForm : Form
+	{
+		private IMainFrame mf = null;
+		private BindingSource bs = null;
+		private DialogResult result = DialogResult.None;
+		private	string cmdLinePass = null;
+		private	string cmdLineUser = null;
+		private int workerOid = -1;
+		
+		public LoginForm(IMainFrame mf)
+		{
+			#if (DEBUG)
+			log4net.LogManager.GetLogger("LoginForm").Info("Trying to login user...");
+			#endif				
+			this.mf = mf;
+			InitializeComponent();
+			
+			//set image...
+			try {
+				pictureBox1.Image = new Bitmap("images/login.jpg");
+			} catch (ArgumentException) {
+				log4net.LogManager.GetLogger("LoginForm").Error("Image missing!");
+			}
+			
+//			OdbcDataReader dr = mf.Database.RemoteQuery("SELECT customers_id, nick FROM users");
+//			//OdbcDataReader dr = mf.Database.ConcurentQuery("SELECT customers_id, nick FROM users");
+			OdbcDataReader dr = mf.Database.RemoteQuery("SELECT rc_oid, login FROM worker");
+			bs = new BindingSource();
+			bs.DataSource = dr;
+			cbLogin.DataSource = bs;
+			cbLogin.DisplayMember = "login";
+			cbLogin.AutoCompleteMode = (System.Windows.Forms.AutoCompleteMode)
+				((System.Windows.Forms.AutoCompleteMode.Suggest | System.Windows.Forms.AutoCompleteMode.Append));
+			cbLogin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+			
+			foreach(string s in mf.MainFrameUI.CmdParams){
+				if(s.Contains("-user=")){
+					cmdLineUser = s.Split('=')[1];
+					foreach(DbDataRecord d in cbLogin.Items){
+						if(d["login"].ToString().CompareTo(cmdLineUser)==0){
+							cbLogin.SelectedItem = d;
+						}
+					}
+				}else if(s.Contains("-pass=")){
+					cmdLinePass = s.Split('=')[1];
+					tbPass.Text = cmdLinePass;
+				}
+			}
+			
+			//??czemu sie wali z tym? ;/
+//			if(cmdLinePass != null && cmdLinePass != null){
+//				ProcessLogin();
+//			}
+		}
+		
+		void GbCancelClick(object sender, EventArgs e)
+		{
+			result = DialogResult.Cancel;
+			if(DialogUtils.ShowOkCancel(mf,"Pytanie","Czy napewno chcesz wyjść z aplikacji?") == DialogResult.OK){
+				#if (DEBUG)
+				log4net.LogManager.GetLogger("LoginForm").Info("Login canceled!");
+				#endif
+				this.Dispose();
+				//mf.MainFrameUI.QuitApplication();
+			}else{
+				return;
+			}
+		}
+		
+		void GbOkClick(object sender, EventArgs e)
+		{
+			ProcessLogin();
+		}
+		
+		void TbPassKeyPress(object sender, KeyPressEventArgs e)
+		{
+			if(e.KeyChar == (char)Keys.Enter){
+				ProcessLogin();
+			}
+		}
+		
+		private void ProcessLogin(){
+			result = DialogResult.OK;
+			
+			string login = ((DbDataRecord)cbLogin.SelectedItem)["login"].ToString();
+			string sql = "select * from worker where login=? and pass=? ";
+			List<OdbcParameter> sqlParams = new List<OdbcParameter>();
+			OdbcParameter op = new OdbcParameter("@login", OdbcType.VarChar, 96);
+			op.Value = login;
+			sqlParams.Add(op);
+			op = new OdbcParameter("@pass", OdbcType.VarChar, 40);
+			op.Value = tbPass.Text;
+			sqlParams.Add(op);
+			QueryResult qr = new QueryResult(mf.Database.ConcurentQuery(sql,sqlParams));
+			if(qr.Rows.Count == 0){
+				#if (DEBUG)
+				log4net.LogManager.GetLogger("LoginForm").Error("Login incorrect!");
+				#endif
+				
+				DialogUtils.ShowError(mf, "Błąd", "Błędne hasło.");
+			}else if(qr.Rows.Count == 1){
+				#if (DEBUG)
+				log4net.LogManager.GetLogger("LoginForm").Info("Login correct!");
+				#endif
+				
+//				string firstname = qr.Rows[0].GetObject("name").ToString();
+//				int userId = qr.Rows[0].GetInt("customers_id");
+//				int rcStore = 999;
+//				bool adminMode = Convert.ToBoolean(qr.Rows[0].GetObject("admin_mode") is DBNull?"false":qr.Rows[0].GetObject("admin_mode"));
+//				mf.MainFrameUI.CurrentUser = new AppUser(firstname, nick, rcStore, userId, adminMode);
+//				mf.MainFrameUI.CurrentUser = new AppUser(mf, qr.Rows[0].GetInt("rc_oid"));
+				this.workerOid = qr.Rows[0].GetInt("rc_oid");
+				this.Dispose();
+			}else{
+				#if (DEBUG)
+				log4net.LogManager.GetLogger("LoginForm").Error("Login query returned more than 1 row!");
+				#endif
+				
+				DialogUtils.ShowError(mf, "Błąd", "Inny błąd");
+			}
+		}
+		
+		public new virtual LoginDialogResult ShowDialog(){
+			base.ShowDialog();
+			return new LoginDialogResult(result, workerOid);
+		}
+		
+		public class LoginDialogResult {
+			private DialogResult result = DialogResult.None;
+			public DialogResult Result {
+				get { return result; }
+			}
+			private int workerOid = -1;
+			public int WorkerOid {
+				get { return workerOid; }
+			}
+			
+			public LoginDialogResult(DialogResult dr, int workerOid){
+				this.result = dr;
+				this.workerOid = workerOid;
+			}
+		}
+		
+		/// <summary>
+		/// Pozwalamy tylko na operacje strzałkami w góre/dół
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		void CbLoginKeyDown(object sender, KeyEventArgs e)
+		{
+			if(e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
+			{
+
+			}
+			else
+			{
+				e.SuppressKeyPress = true;
+				e.Handled = true;
+			}
+		}
+	}
+}

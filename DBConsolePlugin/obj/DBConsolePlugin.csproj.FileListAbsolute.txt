@@ -1,0 +1,16 @@
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\Solarium\bin\Debug\plugins\DBConsolePlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\Solarium\bin\Debug\plugins\DBConsolePlugin.pdb
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\DBConsolePlugin\obj\Debug\ResolveAssemblyReference.cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\DBConsolePlugin\obj\Debug\DBConsolePlugin.DBConsoleView.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\DBConsolePlugin\obj\Debug\DBConsolePlugin.TableForm.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\DBConsolePlugin\obj\Debug\DBConsolePlugin.csproj.GenerateResource.Cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\DBConsolePlugin\obj\Debug\DBConsolePlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\DBConsolePlugin\obj\Debug\DBConsolePlugin.pdb
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBConsolePlugin\obj\Debug\ResolveAssemblyReference.cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBConsolePlugin\obj\Debug\DBConsolePlugin.DBConsoleView.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBConsolePlugin\obj\Debug\DBConsolePlugin.TableForm.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBConsolePlugin\obj\Debug\DBConsolePlugin.csproj.GenerateResource.Cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBConsolePlugin\obj\Debug\DBConsolePlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBConsolePlugin\obj\Debug\DBConsolePlugin.pdb
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\bin\Debug\plugins\DBConsolePlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\bin\Debug\plugins\DBConsolePlugin.pdb

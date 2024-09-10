@@ -1,0 +1,12 @@
+..\Solarium\bin\Debug\plugins\DBLoggerPlugin.dll
+..\Solarium\bin\Debug\plugins\DBLoggerPlugin.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DBLoggerPlugin.DBLoggerView.resources
+obj\Debug\DBLoggerPlugin.csproj.GenerateResource.Cache
+obj\Debug\DBLoggerPlugin.dll
+obj\Debug\DBLoggerPlugin.pdb
+bin\Release\DBLoggerPlugin.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\DBLoggerPlugin.DBLoggerView.resources
+obj\Release\DBLoggerPlugin.csproj.GenerateResource.Cache
+obj\Release\DBLoggerPlugin.dll

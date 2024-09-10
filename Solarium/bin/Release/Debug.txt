@@ -1,0 +1,28 @@
+2008-02-09 02:02:47,187 [thread:1] INFO  Modbus.IO.ModbusTransport - TX: 1, 5, 0, 2, 255, 0, 45, 250
+2008-02-09 02:02:47,453 [thread:1] ERROR Modbus.IO.ModbusTransport - Timeout, 1 retries remaining - The operation has timed out.
+2008-02-09 02:02:47,468 [thread:1] INFO  Modbus.IO.ModbusTransport - TX: 1, 5, 0, 2, 255, 0, 45, 250
+2008-02-09 02:02:47,718 [thread:1] ERROR Modbus.IO.ModbusTransport - Timeout, 0 retries remaining - The operation has timed out.
+2008-02-09 02:02:47,734 [thread:1] INFO  Modbus.IO.ModbusTransport - TX: 2, 5, 0, 2, 255, 0, 45, 201
+2008-02-09 02:02:47,984 [thread:1] ERROR Modbus.IO.ModbusTransport - Timeout, 1 retries remaining - The operation has timed out.
+2008-02-09 02:02:48,000 [thread:1] INFO  Modbus.IO.ModbusTransport - TX: 2, 5, 0, 2, 255, 0, 45, 201
+2008-02-09 02:02:48,250 [thread:1] ERROR Modbus.IO.ModbusTransport - Timeout, 0 retries remaining - The operation has timed out.
+2008-02-09 02:02:48,265 [thread:1] INFO  Modbus.IO.ModbusTransport - TX: 3, 5, 0, 2, 255, 0, 44, 24
+2008-02-09 02:02:48,531 [thread:1] ERROR Modbus.IO.ModbusTransport - Timeout, 1 retries remaining - The operation has timed out.
+2008-02-09 02:02:48,546 [thread:1] INFO  Modbus.IO.ModbusTransport - TX: 3, 5, 0, 2, 255, 0, 44, 24
+2008-02-09 02:02:48,796 [thread:1] ERROR Modbus.IO.ModbusTransport - Timeout, 0 retries remaining - The operation has timed out.
+2008-02-09 02:02:48,812 [thread:1] INFO  Modbus.IO.ModbusTransport - TX: 4, 5, 0, 2, 255, 0, 45, 175
+2008-02-09 02:02:49,062 [thread:1] ERROR Modbus.IO.ModbusTransport - Timeout, 1 retries remaining - The operation has timed out.
+2008-02-09 02:02:49,078 [thread:1] INFO  Modbus.IO.ModbusTransport - TX: 4, 5, 0, 2, 255, 0, 45, 175
+2008-02-09 02:02:49,328 [thread:1] ERROR Modbus.IO.ModbusTransport - Timeout, 0 retries remaining - The operation has timed out.
+2008-02-09 02:02:49,343 [thread:1] INFO  Modbus.IO.ModbusTransport - TX: 5, 5, 0, 2, 255, 0, 44, 126
+2008-02-09 02:02:49,593 [thread:1] ERROR Modbus.IO.ModbusTransport - Timeout, 1 retries remaining - The operation has timed out.
+2008-02-09 02:02:49,609 [thread:1] INFO  Modbus.IO.ModbusTransport - TX: 5, 5, 0, 2, 255, 0, 44, 126
+2008-02-09 02:02:49,859 [thread:1] ERROR Modbus.IO.ModbusTransport - Timeout, 0 retries remaining - The operation has timed out.
+2008-02-09 02:02:49,875 [thread:1] INFO  Modbus.IO.ModbusTransport - TX: 6, 5, 0, 2, 255, 0, 44, 77
+2008-02-09 02:02:50,140 [thread:1] ERROR Modbus.IO.ModbusTransport - Timeout, 1 retries remaining - The operation has timed out.
+2008-02-09 02:02:50,156 [thread:1] INFO  Modbus.IO.ModbusTransport - TX: 6, 5, 0, 2, 255, 0, 44, 77
+2008-02-09 02:02:50,406 [thread:1] ERROR Modbus.IO.ModbusTransport - Timeout, 0 retries remaining - The operation has timed out.
+2008-02-09 02:02:50,421 [thread:1] INFO  Modbus.IO.ModbusTransport - TX: 7, 5, 0, 2, 255, 0, 45, 156
+2008-02-09 02:02:50,671 [thread:1] ERROR Modbus.IO.ModbusTransport - Timeout, 1 retries remaining - The operation has timed out.
+2008-02-09 02:02:50,687 [thread:1] INFO  Modbus.IO.ModbusTransport - TX: 7, 5, 0, 2, 255, 0, 45, 156
+2008-02-09 02:02:50,937 [thread:1] ERROR Modbus.IO.ModbusTransport - Timeout, 0 retries remaining - The operation has timed out.

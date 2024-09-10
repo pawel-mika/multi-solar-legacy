@@ -1,0 +1,16 @@
+..\Solarium\bin\Debug\plugins\DBConstructorPlugin.dll
+..\Solarium\bin\Debug\plugins\DBConstructorPlugin.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DBConstructorPlugin.Controls.BiosComponentTypeEdit.resources
+obj\Debug\DBConstructorPlugin.Controls.DBField.resources
+obj\Debug\DBConstructorPlugin.Gui.MainForm.resources
+obj\Debug\DBConstructorPlugin.csproj.GenerateResource.Cache
+obj\Debug\DBConstructorPlugin.dll
+obj\Debug\DBConstructorPlugin.pdb
+bin\Release\DBConstructorPlugin.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\DBConstructorPlugin.Controls.BiosComponentTypeEdit.resources
+obj\Release\DBConstructorPlugin.Controls.DBField.resources
+obj\Release\DBConstructorPlugin.Gui.MainForm.resources
+obj\Release\DBConstructorPlugin.csproj.GenerateResource.Cache
+obj\Release\DBConstructorPlugin.dll

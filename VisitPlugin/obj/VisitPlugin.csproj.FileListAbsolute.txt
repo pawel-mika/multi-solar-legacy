@@ -1,0 +1,14 @@
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\Solarium\bin\Debug\plugins\VisitPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\Solarium\bin\Debug\plugins\VisitPlugin.pdb
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\VisitPlugin\obj\Debug\ResolveAssemblyReference.cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\VisitPlugin\obj\Debug\VisitPlugin.Gui.VisitMainForm.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\VisitPlugin\obj\Debug\VisitPlugin.csproj.GenerateResource.Cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\VisitPlugin\obj\Debug\VisitPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\VisitPlugin\obj\Debug\VisitPlugin.pdb
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\VisitPlugin\obj\Debug\ResolveAssemblyReference.cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\VisitPlugin\obj\Debug\VisitPlugin.Gui.VisitMainForm.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\VisitPlugin\obj\Debug\VisitPlugin.csproj.GenerateResource.Cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\VisitPlugin\obj\Debug\VisitPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\VisitPlugin\obj\Debug\VisitPlugin.pdb
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\bin\Debug\plugins\VisitPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\bin\Debug\plugins\VisitPlugin.pdb

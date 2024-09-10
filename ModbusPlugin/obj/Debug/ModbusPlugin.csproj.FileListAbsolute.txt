@@ -1,0 +1,16 @@
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\bin\Debug\plugins\ModbusPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\bin\Debug\plugins\ModbusPlugin.pdb
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ResolveAssemblyReference.cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.Bed2Slave.Bed2SlaveControl.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.XMLConfig.XMLConfig.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.LoadTestControl.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.PluginMainForm.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.NetworkScanForm.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.SlaveControls.DiagnosticControl.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.SlaveControls.SCoilStatusControl.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.SlaveControls.SCommStatusControl.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.SlaveControls.SConfigControl.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.SlaveLoadStatus.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.csproj.GenerateResource.Cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.pdb

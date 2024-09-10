@@ -1,0 +1,97 @@
+2024-09-10 21:13:03,678 [thread:1] INFO  AppLauncher - Launching application...
+2024-09-10 21:13:03,678 [thread:1] INFO  AppLauncher - Build: 08.07.2009 17:06:08
+2024-09-10 21:13:03,710 [thread:1] INFO  Database - Initializing remote connection...
+2024-09-10 21:13:03,773 [thread:1] FATAL Database - Error initialising remote connection:
+System.Data.Odbc.OdbcException: ERROR [IM002] [Microsoft][Mened¿er sterowników ODBC] Nie mo¿na odnaleŸæ nazwy Ÿród³a danych, a nie ma podanego sterownika domyœlnego
+   w System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   w System.Data.Odbc.OdbcConnectionHandle..ctor(OdbcConnection connection, OdbcConnectionString constr, OdbcEnvironmentHandle environmentHandle)
+   w System.Data.Odbc.OdbcConnectionOpen..ctor(OdbcConnection outerConnection, OdbcConnectionString connectionOptions)
+   w System.Data.Odbc.OdbcConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   w System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup)
+   w System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   w System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   w System.Data.Odbc.OdbcConnection.Open()
+   w Solarium.Db.DataBase.startRemoteConnection() w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\Db\DataBase.cs:wiersz 157
+2024-09-10 21:13:03,789 [thread:1] ERROR DialogUtils - Error while initializing remote connecion
+2024-09-10 21:13:03,789 [thread:1] ERROR DialogUtils - Class: Solarium.Db.DataBase
+Method: Void startRemoteConnection()
+2024-09-10 21:13:03,789 [thread:1] ERROR DialogUtils - System.Data.Odbc.OdbcException: ERROR [IM002] [Microsoft][Mened¿er sterowników ODBC] Nie mo¿na odnaleŸæ nazwy Ÿród³a danych, a nie ma podanego sterownika domyœlnego
+   w System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, RetCode retcode)
+   w System.Data.Odbc.OdbcConnectionHandle..ctor(OdbcConnection connection, OdbcConnectionString constr, OdbcEnvironmentHandle environmentHandle)
+   w System.Data.Odbc.OdbcConnectionOpen..ctor(OdbcConnection outerConnection, OdbcConnectionString connectionOptions)
+   w System.Data.Odbc.OdbcConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   w System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup)
+   w System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   w System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   w System.Data.Odbc.OdbcConnection.Open()
+   w Solarium.Db.DataBase.startRemoteConnection() w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\Db\DataBase.cs:wiersz 157
+2024-09-10 21:13:05,189 [thread:1] INFO  Database - Remote connection initialized!
+2024-09-10 21:13:05,190 [thread:1] INFO  LoginForm - Trying to login user...
+2024-09-10 21:13:05,228 [thread:1] ERROR DialogUtils - Class: Solarium.Config.AppLauncher
+Method: Boolean Launch()
+2024-09-10 21:13:05,228 [thread:1] ERROR DialogUtils - System.Exception: Class: Solarium.Db.DataBase
+Method: System.Data.Odbc.OdbcDataReader RemoteQuery(System.String) ---> System.InvalidOperationException: Element ExecuteReader wymaga otwartego i dostêpnego po³¹czenia. Obecny stan po³¹czenia: zamkniête.
+   w System.Data.Odbc.OdbcConnection.SetStateExecuting(String method, OdbcTransaction transaction)
+   w System.Data.Odbc.OdbcCommand.ValidateConnectionAndTransaction(String method)
+   w System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   w System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   w System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   w System.Data.Odbc.OdbcCommand.ExecuteReader()
+   w Solarium.Db.DataBase.RemoteQuery(String sql) w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\Db\DataBase.cs:wiersz 371
+   --- Koniec œladu stosu wyj¹tków wewnêtrznych ---
+   w Solarium.Db.DataBase.RemoteQuery(String sql) w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\Db\DataBase.cs:wiersz 382
+   w Solarium.Gui.LoginForm..ctor(IMainFrame mf) w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\Gui\LoginForm.cs:wiersz 53
+   w Solarium.Config.AppLauncher.Launch() w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\Config\AppLauncher.cs:wiersz 57
+2024-09-10 21:13:06,153 [thread:1] INFO  PluginHost - Loading plugins...
+2024-09-10 21:13:06,737 [thread:1] INFO  AppLauncher - Application ready!
+2024-09-10 21:15:52,385 [thread:1] ERROR DialogUtils - Error activating plugin
+2024-09-10 21:15:52,385 [thread:1] ERROR DialogUtils - Class: Solarium.Plugin.PluginHost
+Method: Void ActivatePlugin(Solarium.Plugin.BasePlugin)
+2024-09-10 21:15:52,385 [thread:1] ERROR DialogUtils - System.NotImplementedException: Metoda lub operacja nie jest zaimplementowana.
+
+Server stack trace: 
+   w VisitPlugin.VisitPlugin.Activate() w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\VisitPlugin\VisitPlugin.cs:wiersz 71
+   w System.Runtime.Remoting.Messaging.Message.Dispatch(Object target, Boolean fExecuteInContext)
+   w System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+
+Exception rethrown at [0]: 
+   w System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   w System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   w VisitPlugin.VisitPlugin.Activate()
+   w Solarium.Plugin.PluginHost.ActivatePlugin(BasePlugin plugin) w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\Plugin\PluginHost.cs:wiersz 213
+2024-09-10 21:16:38,545 [thread:1] ERROR DialogUtils - Error activating plugin
+2024-09-10 21:16:38,545 [thread:1] ERROR DialogUtils - Class: Solarium.Plugin.PluginHost
+Method: Void ActivatePlugin(Solarium.Plugin.BasePlugin)
+2024-09-10 21:16:38,545 [thread:1] ERROR DialogUtils - System.NullReferenceException: Odwo³anie do obiektu nie zosta³o ustawione na wyst¹pienie obiektu.
+
+Server stack trace: 
+   w ModbusPlugin.Bed2Slave.Bed2SlaveControl..ctor(IMainFrame mf) w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\Bed2Slave\Bed2SlaveControl.cs:wiersz 45
+   w ModbusPlugin.PluginMainForm..ctor(IMainFrame mf) w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\PluginMainForm.cs:wiersz 70
+   w ModbusPlugin.ModbusPlugin.Activate() w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\ModbusPlugin.cs:wiersz 69
+   w System.Runtime.Remoting.Messaging.Message.Dispatch(Object target, Boolean fExecuteInContext)
+   w System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+
+Exception rethrown at [0]: 
+   w System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   w System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   w ModbusPlugin.ModbusPlugin.Activate()
+   w Solarium.Plugin.PluginHost.ActivatePlugin(BasePlugin plugin) w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\Plugin\PluginHost.cs:wiersz 213
+2024-09-10 21:17:01,298 [thread:6] INFO  Network - Slave scan started...
+2024-09-10 21:17:02,670 [thread:6] INFO  Network - Slave scan finished...
+2024-09-10 21:17:04,971 [thread:1] ERROR DialogUtils - Error activating plugin
+2024-09-10 21:17:04,971 [thread:1] ERROR DialogUtils - Class: Solarium.Plugin.PluginHost
+Method: Void ActivatePlugin(Solarium.Plugin.BasePlugin)
+2024-09-10 21:17:04,971 [thread:1] ERROR DialogUtils - System.NullReferenceException: Odwo³anie do obiektu nie zosta³o ustawione na wyst¹pienie obiektu.
+
+Server stack trace: 
+   w ModbusPlugin.Bed2Slave.Bed2SlaveControl..ctor(IMainFrame mf) w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\Bed2Slave\Bed2SlaveControl.cs:wiersz 45
+   w ModbusPlugin.PluginMainForm..ctor(IMainFrame mf) w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\PluginMainForm.cs:wiersz 70
+   w ModbusPlugin.ModbusPlugin.Activate() w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\ModbusPlugin.cs:wiersz 69
+   w System.Runtime.Remoting.Messaging.Message.Dispatch(Object target, Boolean fExecuteInContext)
+   w System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg, Int32 methodPtr, Boolean fExecuteInContext)
+
+Exception rethrown at [0]: 
+   w System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   w System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   w ModbusPlugin.ModbusPlugin.Activate()
+   w Solarium.Plugin.PluginHost.ActivatePlugin(BasePlugin plugin) w d:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\Plugin\PluginHost.cs:wiersz 213

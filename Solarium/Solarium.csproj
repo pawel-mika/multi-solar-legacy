@@ -1,0 +1,259 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectGuid>{7AEAD564-EA9B-4283-8085-75FDBE512187}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Solarium</RootNamespace>
+    <AssemblyName>Solarium</AssemblyName>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <StartArguments>-user=pablo -pass=pablo</StartArguments>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\Pablo\AppData\Roaming\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>False</Optimize>
+    <ReferencePath>D:\Moje Dokumenty\SharpDevelop Projects\Solarium\ref\</ReferencePath>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+    <ReferencePath>D:\Moje Dokumenty\SharpDevelop Projects\Solarium\ref\</ReferencePath>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <ItemGroup>
+    <Reference Include="DOATransparentLabel">
+      <HintPath>ref\DOATransparentLabel.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="FtdAdapter">
+      <HintPath>ref\nmodbus\FtdAdapter.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GlassButton">
+      <HintPath>ref\GlassButton.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>ref\nmodbus\log4net.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Modbus">
+      <HintPath>ref\nmodbus\Modbus.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Bios\BiosEvent.cs" />
+    <Compile Include="Bios\ChangeSet.cs" />
+    <Compile Include="Bios\Codelist.cs" />
+    <Compile Include="Bios\CodelistEntry.cs" />
+    <Compile Include="Bios\ComponentID.cs" />
+    <Compile Include="Bios\IRcComponent.cs" />
+    <Compile Include="Bios\Model\BiosCodelist.cs" />
+    <Compile Include="Bios\Model\BiosCodelistEntry.cs" />
+    <Compile Include="Bios\Model\BiosComponent.cs" />
+    <Compile Include="Bios\ObjectID.cs" />
+    <Compile Include="Config\AppLauncher.cs" />
+    <Compile Include="Config\AppUser.cs" />
+    <Compile Include="Config\IConfigurable.cs" />
+    <Compile Include="Config\Configuration.cs" />
+    <Compile Include="Bios\Bios.cs" />
+    <Compile Include="Bios\BiosException.cs" />
+    <Compile Include="Bios\Model\BiosComponentType.cs" />
+    <Compile Include="Bios\Model\BiosObjectType.cs" />
+    <Compile Include="Bios\RcComponent.cs" />
+    <Compile Include="Bios\RcObject.cs" />
+    <Compile Include="Controller\BedState.cs" />
+    <Compile Include="Controller\CoilControl.cs" />
+    <Compile Include="Controller\CoilControl.Designer.cs">
+      <DependentUpon>CoilControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\HoldingRegisterControl.cs" />
+    <Compile Include="Controller\HoldingRegisterControl.Designer.cs">
+      <DependentUpon>HoldingRegisterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ModbusNetwork.Transaction.cs" />
+    <Compile Include="Controller\ModbusTransaction.cs" />
+    <Compile Include="Controller\IModbusNetwork.cs" />
+    <Compile Include="Controller\ModbusNetworkEvent.cs" />
+    <Compile Include="Controller\ModbusNetwork.cs" />
+    <Compile Include="Controller\ModbusSlave.cs" />
+    <Compile Include="Controller\ModbusTransactionResult.cs" />
+    <Compile Include="Controller\SlaveDeviceException.cs" />
+    <Compile Include="Controls\BedControl.cs" />
+    <Compile Include="Controls\BedControl.Designer.cs">
+      <DependentUpon>BedControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClientControl.cs" />
+    <Compile Include="Controls\ClientControl.Designer.cs">
+      <DependentUpon>ClientControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CodelistComboBox.cs" />
+    <Compile Include="Controls\DbFieldControl.cs" />
+    <Compile Include="Controls\DbFieldControl.Designer.cs">
+      <DependentUpon>DbFieldControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ISlaveDeviceControl.cs" />
+    <Compile Include="Controls\RcObjectEditControl.cs" />
+    <Compile Include="Controls\RcObjectEditControl.Designer.cs">
+      <DependentUpon>RcObjectEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SlaveDeviceControl.cs" />
+    <Compile Include="Controls\SlaveDeviceControl.Designer.cs">
+      <DependentUpon>SlaveDeviceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SlaveDeviceControlEvent.cs" />
+    <Compile Include="DataModel\Visit.cs" />
+    <Compile Include="Db\DataBase.cs" />
+    <Compile Include="Db\DatabaseEvent.cs" />
+    <Compile Include="Db\QueryTools\QueryResult.cs" />
+    <Compile Include="Db\QueryTools\QueryResultField.cs" />
+    <Compile Include="Db\QueryTools\QueryResultRow.cs" />
+    <Compile Include="Frame\CatchMethodAttribute.cs" />
+    <Compile Include="Frame\CatchPluginAttribute.cs" />
+    <Compile Include="Frame\CatchPluginAttributeSink.cs" />
+    <Compile Include="Frame\CatchPluginContextAttribute.cs" />
+    <Compile Include="Frame\CatchPluginContextProperty.cs" />
+    <Compile Include="Frame\IMainFrame.cs" />
+    <Compile Include="Frame\MainFrameEvent.cs" />
+    <Compile Include="Gui\AboutForm.cs" />
+    <Compile Include="Gui\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\IConfigurableGui.cs" />
+    <Compile Include="Gui\IMFStatusStrip.cs" />
+    <Compile Include="Gui\LoginForm.cs" />
+    <Compile Include="Gui\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\MFStatusStrip.cs" />
+    <Compile Include="Gui\PluginMenuItem.cs" />
+    <Compile Include="Gui\PluginToolStripButton.cs" />
+    <Compile Include="Gui\PrefsForm.cs" />
+    <Compile Include="Gui\PrefsForm.Designer.cs">
+      <DependentUpon>PrefsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\SolariumMainForm.cs" />
+    <Compile Include="Gui\SolariumMainForm.Designer.cs">
+      <DependentUpon>SolariumMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\SplashForm.cs" />
+    <Compile Include="Gui\SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ViewManager.cs" />
+    <Compile Include="Gui\GuiEvent.cs" />
+    <Compile Include="Gui\ViewPluginTabPage.cs" />
+    <Compile Include="Plugin\BasePlugin.cs" />
+    <Compile Include="Plugin\BaseViewPlugin.cs" />
+    <Compile Include="Plugin\PluginEvent.cs" />
+    <Compile Include="Plugin\PluginHost.cs" />
+    <Compile Include="Settings\ApplicationCollection.cs" />
+    <Compile Include="Settings\ApplicationElement.cs" />
+    <Compile Include="Settings\ApplicationSettings.cs" />
+    <Compile Include="Settings\DBConfigSettings.cs" />
+    <Compile Include="Settings\ModbusNetworkSettings.cs" />
+    <Compile Include="Settings\ModbusSlaveCollection.cs" />
+    <Compile Include="Settings\ModbusSlaveElement.cs" />
+    <Compile Include="Settings\PluginConfigElement.cs" />
+    <Compile Include="Settings\PluginConfigSettings.cs" />
+    <Compile Include="Settings\PluginElementCollection.cs" />
+    <Compile Include="Settings\TimesSettings.cs" />
+    <Compile Include="Utils\ThreadUtils.cs" />
+    <Compile Include="Utils\DialogUtils.cs" />
+    <Compile Include="Utils\FormUtils.cs" />
+    <EmbeddedResource Include="Controller\CoilControl.resx">
+      <DependentUpon>CoilControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\HoldingRegisterControl.resx">
+      <DependentUpon>HoldingRegisterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BedControl.resx">
+      <DependentUpon>BedControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ClientControl.resx">
+      <DependentUpon>ClientControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DbFieldControl.resx">
+      <DependentUpon>DbFieldControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RcObjectEditControl.resx">
+      <DependentUpon>RcObjectEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SlaveDeviceControl.resx">
+      <DependentUpon>SlaveDeviceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\LoginForm.en-US.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\LoginForm.en.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\PrefsForm.resx">
+      <DependentUpon>PrefsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\SolariumMainForm.pl-PL.resx">
+      <DependentUpon>SolariumMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\SolariumMainForm.pl.resx">
+      <DependentUpon>SolariumMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\SolariumMainForm.resx">
+      <DependentUpon>SolariumMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bios\Model" />
+    <Folder Include="db" />
+    <Folder Include="Db\QueryTools" />
+    <Folder Include="gui" />
+    <Folder Include="controller" />
+    <Folder Include="Controls" />
+    <Folder Include="Config" />
+    <Folder Include="Bios" />
+    <Folder Include="DataModel" />
+    <Folder Include="Frame" />
+    <Folder Include="Plugin" />
+    <Folder Include="Settings" />
+    <Folder Include="utils" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,96 @@
+/*
+ * Created by SharpDevelop.
+ * User: Pablo
+ * Date: 2007-09-20
+ * Time: 14:18
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
+using System.Configuration;
+using System.Collections.Generic;
+
+using Solarium;
+using Solarium.Config;
+using Solarium.Frame;
+using Solarium.Plugin;
+using Solarium.Settings;
+using Solarium.Db;
+using Solarium.Utils;
+
+namespace DBConsolePlugin
+{
+	/// <summary>
+	/// Description of MyClass.
+	/// </summary>
+	public class DBConsolePlugin : IViewPlugin
+	{
+		private DBConsoleView pluginView = null;
+		private IMainFrame mf = null;
+		private PluginConfigElement pluginConfigElement = new PluginConfigElement();
+		
+		public System.Windows.Forms.Control View {
+			get {
+				return pluginView;
+			}
+		}
+		
+		public string Name {
+			get {
+				return "DBConsole";
+			}
+		}
+		
+		public string Description {
+			get {
+				return "Debug database console plugin";
+			}
+		}
+		
+		public string Author {
+			get {
+				return "Pablo";
+			}
+		}
+		
+		public string Version {
+			get {
+				return "0.0.1a";
+			}
+		}
+		
+		public void Initialize(IMainFrame mf)
+		{
+			this.mf = mf;
+			
+			pluginConfigElement.Type = this.GetType().Name;
+			pluginConfigElement.Menu = "Debug";
+			pluginConfigElement.Submenu = "";
+			pluginConfigElement.MenuEntry = "Database console";
+			pluginConfigElement.ToolbarImage = "./images/toolbar/DBConsole.png";
+		}
+		
+		public void Activate()
+		{
+			pluginView = new DBConsoleView(mf);
+		}
+		
+		public void Unactivate()
+		{
+		}
+		
+		public void Dispose()
+		{
+
+		}
+		
+		public PluginConfigElement PluginConfigElement {
+			get {
+				return pluginConfigElement;
+			}
+			set {
+				this.pluginConfigElement = value;
+			}
+		}
+	}
+}

@@ -1,0 +1,71 @@
+﻿/*
+ * Created by SharpDevelop.
+ * User: Pablo
+ * Date: 2007-11-30
+ * Time: 22:52
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+
+using System;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Windows.Forms;
+using System.IO;
+
+using Solarium.Plugin;
+
+namespace Solarium.Gui
+{
+	/// <summary>
+	/// Description of PluginToolStripItem.
+	/// </summary>
+	public class PluginToolStripButton : ToolStripButton
+	{
+		private Image normalImage = null;
+		private Image mouseOverImage = null;
+		private BasePlugin plugin = null;
+		public BasePlugin Plugin {
+			get { return this.plugin; }
+			set { this.plugin = value; }
+		}
+		
+		/// <summary>
+		/// Our little override of ToolStripButton to hold our plugin.
+		/// </summary>
+		/// <param name="plugin"></param>
+		public PluginToolStripButton(IPlugin plugin) : base()
+		{
+			this.plugin = plugin;
+			if(plugin.PluginConfigElement.ToolbarImage != null && plugin.PluginConfigElement.ToolbarImage.Length > 0) {
+				FileInfo file = new FileInfo(plugin.PluginConfigElement.ToolbarImage);
+				if(file.Exists){
+					normalImage = new Bitmap(plugin.PluginConfigElement.ToolbarImage);
+					this.Image = normalImage;
+				} else {
+					this.Text = "Icon" + Environment.NewLine + "missing";
+				}
+			}
+			if(plugin.PluginConfigElement.ToolbarImageMouseOver != null && plugin.PluginConfigElement.ToolbarImageMouseOver.Length > 0) {
+				FileInfo file = new FileInfo(plugin.PluginConfigElement.ToolbarImageMouseOver);
+				if(file.Exists){
+					mouseOverImage = new Bitmap(plugin.PluginConfigElement.ToolbarImageMouseOver);
+					this.MouseEnter += delegate(object sender, EventArgs e) 
+					{
+						this.Image = mouseOverImage;
+					};
+					this.MouseLeave += delegate(object sender, EventArgs e) 
+					{
+						this.Image = normalImage;
+					};
+				} else {
+					
+				}
+			}
+			this.DisplayStyle = ToolStripItemDisplayStyle.Image;
+			this.ImageAlign = ContentAlignment.TopCenter;
+			this.ImageScaling = ToolStripItemImageScaling.None;
+			this.Padding = new Padding(0);
+		}
+	}
+}

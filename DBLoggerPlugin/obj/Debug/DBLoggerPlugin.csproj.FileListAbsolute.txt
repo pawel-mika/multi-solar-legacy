@@ -1,0 +1,7 @@
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\bin\Debug\plugins\DBLoggerPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\bin\Debug\plugins\DBLoggerPlugin.pdb
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBLoggerPlugin\obj\Debug\ResolveAssemblyReference.cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBLoggerPlugin\obj\Debug\DBLoggerPlugin.DBLoggerView.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBLoggerPlugin\obj\Debug\DBLoggerPlugin.csproj.GenerateResource.Cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBLoggerPlugin\obj\Debug\DBLoggerPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBLoggerPlugin\obj\Debug\DBLoggerPlugin.pdb

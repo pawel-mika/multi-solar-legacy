@@ -1,0 +1,12 @@
+..\Solarium\bin\Debug\plugins\SolarCustomerPlugin.dll
+..\Solarium\bin\Debug\plugins\SolarCustomerPlugin.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SolarCustomerPlugin.Gui.SCPMainForm.resources
+obj\Debug\SolarCustomerPlugin.csproj.GenerateResource.Cache
+obj\Debug\SolarCustomerPlugin.dll
+obj\Debug\SolarCustomerPlugin.pdb
+bin\Release\SolarCustomerPlugin.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\SolarCustomerPlugin.Gui.SCPMainForm.resources
+obj\Release\SolarCustomerPlugin.csproj.GenerateResource.Cache
+obj\Release\SolarCustomerPlugin.dll

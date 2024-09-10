@@ -1,0 +1,142 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectGuid>{85BE4226-AAA1-46FD-8BB0-FC25B82F7D6D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ModbusPlugin</RootNamespace>
+    <AssemblyName>ModbusPlugin</AssemblyName>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\Solarium\bin\Debug\plugins\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <StartAction>Project</StartAction>
+    <StartProgram>..\Solarium\bin\Debug\Solarium.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\Solarium\ref\nmodbus\log4net.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Modbus">
+      <HintPath>..\Solarium\ref\nmodbus\Modbus.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Bed2Slave\Bed2SlaveControl.cs" />
+    <Compile Include="Bed2Slave\Bed2SlaveControl.Designer.cs">
+      <DependentUpon>Bed2SlaveControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XMLConfig\XMLConfig.cs" />
+    <Compile Include="XMLConfig\XMLConfig.Designer.cs">
+      <DependentUpon>XMLConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadTestControl.cs" />
+    <Compile Include="LoadTestControl.Designer.cs">
+      <DependentUpon>LoadTestControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModbusPlugin.cs" />
+    <Compile Include="PluginMainForm.cs" />
+    <Compile Include="PluginMainForm.Designer.cs">
+      <DependentUpon>PluginMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetworkScanForm.cs" />
+    <Compile Include="NetworkScanForm.Designer.cs">
+      <DependentUpon>NetworkScanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlaveControls\DiagnosticControl.cs" />
+    <Compile Include="SlaveControls\DiagnosticControl.Designer.cs">
+      <DependentUpon>DiagnosticControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlaveControls\SCoilStatusControl.cs" />
+    <Compile Include="SlaveControls\SCoilStatusControl.Designer.cs">
+      <DependentUpon>SCoilStatusControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlaveControls\SCommStatusControl.cs" />
+    <Compile Include="SlaveControls\SCommStatusControl.Designer.cs">
+      <DependentUpon>SCommStatusControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlaveControls\SConfigControl.cs" />
+    <Compile Include="SlaveControls\SConfigControl.Designer.cs">
+      <DependentUpon>SConfigControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlaveLoadStatus.cs" />
+    <Compile Include="SlaveLoadStatus.Designer.cs">
+      <DependentUpon>SlaveLoadStatus.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bed2Slave\Bed2SlaveControl.resx">
+      <DependentUpon>Bed2SlaveControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XMLConfig\XMLConfig.resx">
+      <DependentUpon>XMLConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadTestControl.resx">
+      <DependentUpon>LoadTestControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PluginMainForm.resx">
+      <DependentUpon>PluginMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetworkScanForm.resx">
+      <DependentUpon>NetworkScanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlaveControls\DiagnosticControl.resx">
+      <DependentUpon>DiagnosticControl.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlaveControls\SCoilStatusControl.resx">
+      <DependentUpon>SCoilStatusControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlaveControls\SCommStatusControl.resx">
+      <DependentUpon>SCommStatusControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlaveControls\SConfigControl.resx">
+      <DependentUpon>SConfigControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlaveLoadStatus.resx">
+      <DependentUpon>SlaveLoadStatus.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Solarium\Solarium.csproj">
+      <Project>{7AEAD564-EA9B-4283-8085-75FDBE512187}</Project>
+      <Name>Solarium</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <Folder Include="Bed2Slave" />
+    <Folder Include="XMLConfig" />
+    <Folder Include="SlaveControls" />
+  </ItemGroup>
+</Project>

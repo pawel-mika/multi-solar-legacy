@@ -1,0 +1,5 @@
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\bin\Debug\plugins\RescanNetworkPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\bin\Debug\plugins\RescanNetworkPlugin.pdb
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\RescanNetworkPlugin\obj\Debug\ResolveAssemblyReference.cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\RescanNetworkPlugin\obj\Debug\RescanNetworkPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\RescanNetworkPlugin\obj\Debug\RescanNetworkPlugin.pdb

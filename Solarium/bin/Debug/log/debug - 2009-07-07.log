@@ -1,0 +1,498 @@
+2009-07-07 18:06:12,268 [thread:1] INFO  AppLauncher - Launching application...
+2009-07-07 18:06:12,268 [thread:1] INFO  AppLauncher - Build: 2009-07-08 17:06:08
+2009-07-07 18:06:12,301 [thread:1] INFO  Database - Initializing remote connection...
+2009-07-07 18:06:12,517 [thread:1] INFO  Bios - Initializing bios...
+2009-07-07 18:06:12,988 [thread:1] INFO  Bios - Bios initialization complete:
+2009-07-07 18:06:12,988 [thread:1] INFO  Bios - 9 object types,
+2009-07-07 18:06:12,988 [thread:1] INFO  Bios - 12 component types,
+2009-07-07 18:06:12,988 [thread:1] INFO  Bios - 9 objects,
+2009-07-07 18:06:12,989 [thread:1] INFO  Bios - 8 codelists
+2009-07-07 18:06:13,013 [thread:1] INFO  Database - Remote connection initialized!
+2009-07-07 18:06:13,020 [thread:1] INFO  LoginForm - Trying to login user...
+2009-07-07 18:06:14,027 [thread:1] INFO  LoginForm - Login correct!
+2009-07-07 18:06:14,099 [thread:1] INFO  PluginHost - Loading plugins...
+2009-07-07 18:06:14,411 [thread:1] INFO  Network - Master information: 
+Description: USB <-> Serial
+Flags: 0
+Id: 67330049
+Location id: 81
+Product id: 24577
+Serial no: 
+Type: 0
+Vendor id: 1027
+2009-07-07 18:06:14,430 [thread:1] INFO  Network - Modbus master device initialization complete.
+2009-07-07 18:06:14,472 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void PowerOn()
+2009-07-07 18:06:14,473 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void set_Power(Boolean)
+2009-07-07 18:06:14,543 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 1, 5, 0, 2, 255, 0, 45, 250
+2009-07-07 18:06:14,801 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 4 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:14,810 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 1, 5, 0, 2, 255, 0, 45, 250
+2009-07-07 18:06:15,064 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 3 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:15,069 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 1, 5, 0, 2, 255, 0, 45, 250
+2009-07-07 18:06:15,323 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 2 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:15,328 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 1, 5, 0, 2, 255, 0, 45, 250
+2009-07-07 18:06:15,582 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 1 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:15,588 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 1, 5, 0, 2, 255, 0, 45, 250
+2009-07-07 18:06:15,854 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 0 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:15,873 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void PowerOn()
+2009-07-07 18:06:15,873 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void set_Power(Boolean)
+2009-07-07 18:06:15,879 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 5, 0, 2, 255, 0, 45, 201
+2009-07-07 18:06:15,906 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 5, 0, 2, 255, 0, 45, 201
+2009-07-07 18:06:15,934 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void set_KeyFilterTime(Int32)
+2009-07-07 18:06:15,940 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 4, 0, 8, 201, 254
+2009-07-07 18:06:15,961 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 4, 0, 8, 201, 254
+2009-07-07 18:06:15,964 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void set_KeyHoldTime(Int32)
+2009-07-07 18:06:15,969 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 22, 2, 113, 169, 121
+2009-07-07 18:06:15,993 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 22, 2, 113, 169, 121
+2009-07-07 18:06:15,994 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void DisableButtonsReaction()
+2009-07-07 18:06:15,999 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:16,024 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:16,030 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:16,056 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:16,804 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void DisableButtonsReaction()
+2009-07-07 18:06:16,810 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:16,832 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:16,838 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:16,864 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:16,876 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void PowerOn()
+2009-07-07 18:06:16,876 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void set_Power(Boolean)
+2009-07-07 18:06:16,882 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 3, 5, 0, 2, 255, 0, 44, 24
+2009-07-07 18:06:17,136 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 4 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:17,142 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 3, 5, 0, 2, 255, 0, 44, 24
+2009-07-07 18:06:17,396 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 3 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:17,402 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 3, 5, 0, 2, 255, 0, 44, 24
+2009-07-07 18:06:17,656 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 2 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:17,661 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 3, 5, 0, 2, 255, 0, 44, 24
+2009-07-07 18:06:17,915 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 1 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:17,921 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 3, 5, 0, 2, 255, 0, 44, 24
+2009-07-07 18:06:18,175 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 0 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:18,193 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void PowerOn()
+2009-07-07 18:06:18,193 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void set_Power(Boolean)
+2009-07-07 18:06:18,199 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 4, 5, 0, 2, 255, 0, 45, 175
+2009-07-07 18:06:18,453 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 4 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:18,459 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 4, 5, 0, 2, 255, 0, 45, 175
+2009-07-07 18:06:18,715 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 3 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:18,721 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 4, 5, 0, 2, 255, 0, 45, 175
+2009-07-07 18:06:18,975 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 2 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:18,981 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 4, 5, 0, 2, 255, 0, 45, 175
+2009-07-07 18:06:19,235 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 1 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:19,241 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 4, 5, 0, 2, 255, 0, 45, 175
+2009-07-07 18:06:19,495 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 0 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:19,512 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void PowerOn()
+2009-07-07 18:06:19,512 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void set_Power(Boolean)
+2009-07-07 18:06:19,518 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 5, 5, 0, 2, 255, 0, 44, 126
+2009-07-07 18:06:19,772 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 4 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:19,778 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 5, 5, 0, 2, 255, 0, 44, 126
+2009-07-07 18:06:20,032 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 3 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:20,038 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 5, 5, 0, 2, 255, 0, 44, 126
+2009-07-07 18:06:20,292 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 2 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:20,298 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 5, 5, 0, 2, 255, 0, 44, 126
+2009-07-07 18:06:20,552 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 1 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:20,558 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 5, 5, 0, 2, 255, 0, 44, 126
+2009-07-07 18:06:20,821 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 0 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:20,840 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void PowerOn()
+2009-07-07 18:06:20,840 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void set_Power(Boolean)
+2009-07-07 18:06:20,846 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 6, 5, 0, 2, 255, 0, 44, 77
+2009-07-07 18:06:21,100 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 4 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:21,106 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 6, 5, 0, 2, 255, 0, 44, 77
+2009-07-07 18:06:21,360 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 3 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:21,366 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 6, 5, 0, 2, 255, 0, 44, 77
+2009-07-07 18:06:21,620 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 2 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:21,626 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 6, 5, 0, 2, 255, 0, 44, 77
+2009-07-07 18:06:21,880 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 1 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:21,886 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 6, 5, 0, 2, 255, 0, 44, 77
+2009-07-07 18:06:22,140 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 0 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:22,158 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void PowerOn()
+2009-07-07 18:06:22,158 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void set_Power(Boolean)
+2009-07-07 18:06:22,164 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 7, 5, 0, 2, 255, 0, 45, 156
+2009-07-07 18:06:22,418 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 4 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:22,424 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 7, 5, 0, 2, 255, 0, 45, 156
+2009-07-07 18:06:22,678 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 3 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:22,684 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 7, 5, 0, 2, 255, 0, 45, 156
+2009-07-07 18:06:22,950 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 2 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:22,956 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 7, 5, 0, 2, 255, 0, 45, 156
+2009-07-07 18:06:23,210 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 1 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:23,216 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 7, 5, 0, 2, 255, 0, 45, 156
+2009-07-07 18:06:23,470 [thread:1] WARN  Modbus.IO.ModbusTransport - TimeoutException, 0 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:23,514 [thread:1] INFO  AppLauncher - Application ready!
+2009-07-07 18:06:31,435 [thread:1] INFO  Solarium.Controller.ModbusSlave - Boolean IsHeatingStartReactionActive()
+2009-07-07 18:06:31,436 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void EnableHeatingStartReaction()
+2009-07-07 18:06:31,436 [thread:1] INFO  Solarium.Controller.ModbusSlave - Boolean IsHeatingStartReactionActive()
+2009-07-07 18:06:31,436 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void EnableHeatingStartReaction()
+2009-07-07 18:06:31,436 [thread:1] INFO  Solarium.Controller.ModbusSlave - Boolean IsHeatingStartReactionActive()
+2009-07-07 18:06:31,436 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void EnableHeatingStartReaction()
+2009-07-07 18:06:31,436 [thread:1] INFO  Solarium.Controller.ModbusSlave - Boolean IsHeatingStartReactionActive()
+2009-07-07 18:06:31,436 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void EnableHeatingStartReaction()
+2009-07-07 18:06:31,436 [thread:1] INFO  Solarium.Controller.ModbusSlave - Boolean IsHeatingStartReactionActive()
+2009-07-07 18:06:34,831 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void DisableButtonsReaction()
+2009-07-07 18:06:34,837 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:34,857 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:34,863 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:34,889 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:34,900 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void DisableButtonsReaction()
+2009-07-07 18:06:34,905 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:34,920 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:34,926 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:34,952 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:34,953 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void PowerOff()
+2009-07-07 18:06:34,953 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void DisableButtonsReaction()
+2009-07-07 18:06:34,959 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:34,984 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:34,990 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:35,015 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:35,016 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void set_Power(Boolean)
+2009-07-07 18:06:35,021 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 5, 0, 2, 0, 0, 108, 57
+2009-07-07 18:06:35,047 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 5, 0, 2, 0, 0, 108, 57
+2009-07-07 18:06:40,190 [thread:7] INFO  Network - Slave scan started...
+2009-07-07 18:06:40,202 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 1, 1, 0, 2, 0, 1, 92, 10
+2009-07-07 18:06:40,456 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 4 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:40,462 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 1, 1, 0, 2, 0, 1, 92, 10
+2009-07-07 18:06:40,716 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 3 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:40,722 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 1, 1, 0, 2, 0, 1, 92, 10
+2009-07-07 18:06:40,976 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 2 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:40,982 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 1, 1, 0, 2, 0, 1, 92, 10
+2009-07-07 18:06:41,236 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 1 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:41,242 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 1, 1, 0, 2, 0, 1, 92, 10
+2009-07-07 18:06:41,504 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 0 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:41,518 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 1, 0, 2, 0, 1, 92, 57
+2009-07-07 18:06:41,541 [thread:7] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 1, 1, 0, 81, 204
+2009-07-07 18:06:41,580 [thread:7] INFO  Solarium.Controller.ModbusSlave - Void PowerOn()
+2009-07-07 18:06:41,580 [thread:7] INFO  Solarium.Controller.ModbusSlave - Void set_Power(Boolean)
+2009-07-07 18:06:41,586 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 5, 0, 2, 255, 0, 45, 201
+2009-07-07 18:06:41,605 [thread:7] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 5, 0, 2, 255, 0, 45, 201
+2009-07-07 18:06:41,605 [thread:7] INFO  Solarium.Controller.ModbusSlave - Void set_KeyFilterTime(Int32)
+2009-07-07 18:06:41,611 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 4, 0, 8, 201, 254
+2009-07-07 18:06:41,636 [thread:7] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 4, 0, 8, 201, 254
+2009-07-07 18:06:41,636 [thread:7] INFO  Solarium.Controller.ModbusSlave - Void set_KeyHoldTime(Int32)
+2009-07-07 18:06:41,642 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 22, 2, 113, 169, 121
+2009-07-07 18:06:41,668 [thread:7] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 22, 2, 113, 169, 121
+2009-07-07 18:06:41,668 [thread:7] INFO  Solarium.Controller.ModbusSlave - Void DisableButtonsReaction()
+2009-07-07 18:06:41,674 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:41,700 [thread:7] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:41,706 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:41,731 [thread:7] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:42,602 [thread:7] INFO  Solarium.Controller.ModbusSlave - Void DisableButtonsReaction()
+2009-07-07 18:06:42,608 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:42,634 [thread:7] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:42,640 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:42,666 [thread:7] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:42,675 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 3, 1, 0, 2, 0, 1, 93, 232
+2009-07-07 18:06:42,929 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 4 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:42,935 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 3, 1, 0, 2, 0, 1, 93, 232
+2009-07-07 18:06:43,189 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 3 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:43,195 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 3, 1, 0, 2, 0, 1, 93, 232
+2009-07-07 18:06:43,449 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 2 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:43,455 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 3, 1, 0, 2, 0, 1, 93, 232
+2009-07-07 18:06:43,709 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 1 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:43,715 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 3, 1, 0, 2, 0, 1, 93, 232
+2009-07-07 18:06:43,969 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 0 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:43,979 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 4, 1, 0, 2, 0, 1, 92, 95
+2009-07-07 18:06:44,233 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 4 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:44,239 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 4, 1, 0, 2, 0, 1, 92, 95
+2009-07-07 18:06:44,493 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 3 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:44,499 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 4, 1, 0, 2, 0, 1, 92, 95
+2009-07-07 18:06:44,753 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 2 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:44,760 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 4, 1, 0, 2, 0, 1, 92, 95
+2009-07-07 18:06:45,030 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 1 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:45,037 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 4, 1, 0, 2, 0, 1, 92, 95
+2009-07-07 18:06:45,291 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 0 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:45,301 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 5, 1, 0, 2, 0, 1, 93, 142
+2009-07-07 18:06:45,555 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 4 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:45,563 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 5, 1, 0, 2, 0, 1, 93, 142
+2009-07-07 18:06:45,817 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 3 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:45,823 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 5, 1, 0, 2, 0, 1, 93, 142
+2009-07-07 18:06:46,077 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 2 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:46,084 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 5, 1, 0, 2, 0, 1, 93, 142
+2009-07-07 18:06:46,338 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 1 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:46,344 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 5, 1, 0, 2, 0, 1, 93, 142
+2009-07-07 18:06:46,598 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 0 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:46,621 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 6, 1, 0, 2, 0, 1, 93, 189
+2009-07-07 18:06:46,875 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 4 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:46,881 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 6, 1, 0, 2, 0, 1, 93, 189
+2009-07-07 18:06:47,134 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 3 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:47,141 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 6, 1, 0, 2, 0, 1, 93, 189
+2009-07-07 18:06:47,394 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 2 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:47,400 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 6, 1, 0, 2, 0, 1, 93, 189
+2009-07-07 18:06:47,654 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 1 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:47,660 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 6, 1, 0, 2, 0, 1, 93, 189
+2009-07-07 18:06:47,914 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 0 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:47,925 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 7, 1, 0, 2, 0, 1, 92, 108
+2009-07-07 18:06:48,178 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 4 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:48,184 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 7, 1, 0, 2, 0, 1, 92, 108
+2009-07-07 18:06:48,438 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 3 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:48,443 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 7, 1, 0, 2, 0, 1, 92, 108
+2009-07-07 18:06:48,480 [thread:1] INFO  Solarium.Controller.ModbusSlave - Boolean IsHeatingStartReactionActive()
+2009-07-07 18:06:48,480 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void EnableHeatingStartReaction()
+2009-07-07 18:06:48,480 [thread:1] INFO  Solarium.Controller.ModbusSlave - Boolean IsHeatingStartReactionActive()
+2009-07-07 18:06:48,480 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void EnableHeatingStartReaction()
+2009-07-07 18:06:48,480 [thread:1] INFO  Solarium.Controller.ModbusSlave - Boolean IsHeatingStartReactionActive()
+2009-07-07 18:06:48,480 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void EnableHeatingStartReaction()
+2009-07-07 18:06:48,480 [thread:1] INFO  Solarium.Controller.ModbusSlave - Boolean IsHeatingStartReactionActive()
+2009-07-07 18:06:48,480 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void EnableHeatingStartReaction()
+2009-07-07 18:06:48,480 [thread:1] INFO  Solarium.Controller.ModbusSlave - Boolean IsHeatingStartReactionActive()
+2009-07-07 18:06:48,697 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 2 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:48,703 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 7, 1, 0, 2, 0, 1, 92, 108
+2009-07-07 18:06:48,957 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 1 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:48,963 [thread:7] INFO  Modbus.IO.ModbusSerialTransport - TX: 7, 1, 0, 2, 0, 1, 92, 108
+2009-07-07 18:06:49,219 [thread:7] WARN  Modbus.IO.ModbusTransport - TimeoutException, 0 retries remaining - System.TimeoutException: The operation has timed out.
+   w FtdAdapter.FtdUsbPort.Read(Byte[] buffer, Int32 offset, Int32 count)
+   w Modbus.IO.ModbusRtuTransport.Read(Int32 count)
+   w Modbus.IO.ModbusRtuTransport.ReadResponse[T]()
+   w Modbus.IO.ModbusTransport.UnicastMessage[T](IModbusMessage message)
+2009-07-07 18:06:49,238 [thread:7] INFO  Network - Slave scan finished...
+2009-07-07 18:06:51,373 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void DisableButtonsReaction()
+2009-07-07 18:06:51,378 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:51,393 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:51,399 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:51,425 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:51,428 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void DisableButtonsReaction()
+2009-07-07 18:06:51,433 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:51,456 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:51,462 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:51,488 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:51,488 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void PowerOff()
+2009-07-07 18:06:51,489 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void DisableButtonsReaction()
+2009-07-07 18:06:51,494 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:51,520 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 7, 0, 0, 56, 56
+2009-07-07 18:06:51,526 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:51,551 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 6, 0, 8, 0, 0, 8, 59
+2009-07-07 18:06:51,552 [thread:1] INFO  Solarium.Controller.ModbusSlave - Void set_Power(Boolean)
+2009-07-07 18:06:51,557 [thread:1] INFO  Modbus.IO.ModbusSerialTransport - TX: 2, 5, 0, 2, 0, 0, 108, 57
+2009-07-07 18:06:51,583 [thread:1] INFO  Modbus.IO.ModbusRtuTransport - RX: 2, 5, 0, 2, 0, 0, 108, 57
+2009-07-07 18:06:53,495 [thread:8] INFO  Network - Alive scan started...
+2009-07-07 18:06:53,495 [thread:8] INFO  Network - Alive scan finished...

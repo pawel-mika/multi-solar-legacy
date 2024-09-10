@@ -1,0 +1,319 @@
+﻿/*
+ * Created by SharpDevelop.
+ * User: Pablo
+ * Date: 2007-09-15
+ * Time: 14:19
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+
+using System;
+using System.Drawing;
+using System.Collections.Generic;
+using System.Windows.Forms;
+
+using Solarium.Plugin;
+using Solarium.Config;
+using Solarium.Frame;
+using Solarium.Utils;
+using Solarium.Settings;
+
+namespace Solarium.Gui
+{
+	/// <summary>
+	/// Description of ViewManager.
+	/// TODO dodać obsługe separatorów w menu...
+	/// </summary>
+	public class ViewManager
+	{
+		private IMainFrame mf = null;
+		
+		//currently focused plugin
+		private IViewPlugin focusedViewPlugin = null;
+		public IViewPlugin FocusedViewPlugin {
+			get { return focusedViewPlugin; }
+			set { focusedViewPlugin = value; }
+		}
+
+		/// <summary>
+		/// View manager responsible for handling some view issues (plugin tabs, view manu etc)
+		/// </summary>
+		/// <param name="mf"></param>
+		public ViewManager(IMainFrame mf)
+		{
+			this.mf = mf;
+			
+			mf.PrefsChanged += new PrefsChangedEventHandler(onPrefsChanged);
+			
+			mf.PluginHost.PluginActivated += new PluginEventHandler(onPluginActivated);
+			mf.PluginHost.PluginFocused += new PluginEventHandler(onPluginFocused);
+			
+			GeneratePluginMenus();
+			GeneratePluginToolbar();
+		}
+		
+		/// <summary>
+		/// Handles preferences changes
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="pcea"></param>
+		private void onPrefsChanged(object sender, PrefsChangedEventArgs pcea)
+		{
+			foreach(TabPage tp in mf.MainFrameUI.TabControl.Controls){
+				tp.Font = pcea.NormalFont;
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void onPluginActivated(object sender, PluginEventArgs e){
+			PluginWasActivated(e.Plugin);
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void onPluginFocused(object sender, PluginEventArgs e){
+			if(e.Plugin is IViewPlugin){
+				selectPluginTab((IViewPlugin)e.Plugin);
+			}
+			mf.MFStatusStrip.FreeMessage.Text = e.Plugin.Name;
+		}
+		
+		/// <summary>
+		/// Occurs when user select any of the plugin type from the menu or from toolbar
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void pluginSelected(object sender, EventArgs e){
+			IPlugin plugin = null;
+			
+			if(sender is PluginMenuItem){
+				plugin = ((PluginMenuItem)sender).Plugin;
+			}else if(sender is PluginToolStripButton){
+				plugin = ((PluginToolStripButton)sender).Plugin;
+			}
+			
+			mf.PluginHost.ActivatePlugin(plugin);
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="plugin"></param>
+		public void PluginWasActivated (IPlugin plugin){
+			if(plugin is IPlugin && !(plugin is IViewPlugin)){
+				mf.MFStatusStrip.FreeMessage.Text = plugin.Name;
+			}else if(plugin is IViewPlugin){
+				IViewPlugin vp = (IViewPlugin)plugin;
+				focusedViewPlugin = vp;
+				//if plugin is activated and it's tab page
+				//is showing DO NOT activate it again, just find and show tab!
+				if(mf.PluginHost.ActivePlugins.Contains((IPlugin)vp)){
+				//if(activatedViewPlugins.Contains(vp)){
+					selectPluginTab(vp);
+				}else{
+					mf.MFStatusStrip.FreeMessage.Text = vp.Name;
+					//activatedViewPlugins.AddLast(vp);
+					addPluginTab(vp);
+					generateMenu();
+				}
+			}
+		}
+		
+		/// <summary>
+		/// If a IViewPlugin is on the activated view plugins list,
+		/// you can call this method to show it's tabPage
+		/// </summary>
+		/// <param name="vp"></param>
+		private void selectPluginTab(IViewPlugin vp){
+			bool pluginTab = false;
+			
+			focusedViewPlugin = vp;
+			
+			foreach(TabPage tp in mf.MainFrameUI.TabControl.Controls){
+				if(tp is ViewPluginTabPage){
+					ViewPluginTabPage vptp = (ViewPluginTabPage)tp;
+					if(vptp.Plugin == vp){
+						pluginTab = true;
+						mf.MainFrameUI.TabControl.SelectedTab = vptp;
+						mf.MFStatusStrip.FreeMessage.Text = vptp.Plugin.Name;
+						break;
+					}
+				}
+			}
+			if(!pluginTab){
+				addPluginTab(vp);
+				generateMenu();
+			}
+		}
+		
+		/// <summary>
+		/// Generate and add to main tabs control new viewplugin tab page.
+		/// ViewPlugin must be first activated (or at least must have property view!=null)
+		/// </summary>
+		/// <param name="plug"></param>
+		private void addPluginTab(IViewPlugin plug){
+			ViewPluginTabPage tp = new ViewPluginTabPage(plug, plug.Name);
+			tp.TabLeave += new TabChangedEventHandler(tabChanged);
+			tp.TabEnter += new TabChangedEventHandler(tabChanged);				
+			tp.Controls.Add(plug.View);
+			tp.Padding = Padding.Empty;
+			tp.Margin = Padding.Empty;
+			tp.Controls[0].Dock = DockStyle.Fill;
+			//tp.Controls[0].Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom;
+			mf.MainFrameUI.TabControl.Controls.Add(tp);
+			mf.MainFrameUI.TabControl.SelectedTab = tp;
+		}
+		
+		/// <summary>
+		/// Occurs when user entered/leaved viewPluginTabPage
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void tabChanged(object sender, TabChangedEventArgs e){
+			focusedViewPlugin = e.Plugin;
+			mf.PluginHost.FocusPlugin(e.Plugin);
+			generateMenu();
+		}
+
+		/// <summary>
+		/// Fill main toolbar with plugin buttons that have icon attached in config file.
+		/// </summary>
+		private void GeneratePluginToolbar(){
+			foreach(IPlugin p in mf.PluginHost.Plugins){
+				PluginConfigElement pce = p.PluginConfigElement;
+				if(pce.ToolbarImage!=null && pce.ToolbarImage.Length>0){
+					try{
+						PluginToolStripButton ptsb = new PluginToolStripButton( p );
+						//testowo... potem to mozna wyjebać.. albo zostawić;P
+						ptsb.DisplayStyle = ToolStripItemDisplayStyle.ImageAndText;
+						//ptsb.TextAlign = ContentAlignment.BottomCenter;
+						//ptsb.TextImageRelation= TextImageRelation.ImageAboveText;
+						ptsb.ToolTipText = p.Name + Environment.NewLine + p.Description;
+						ptsb.Font = new System.Drawing.Font("Trebuchet MS", 8.0F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+						//end testowo...
+						ptsb.Click += new EventHandler( pluginSelected );
+						
+						if(pce.ToolbarSeparator!=null && pce.ToolbarSeparator.ToLower().Equals("before")){
+							mf.MainFrameUI.ToolStrip.Items.Add( new ToolStripSeparator() );
+							mf.MainFrameUI.ToolStrip.Items.Add( ptsb );
+						}else if(pce.ToolbarSeparator!=null && pce.ToolbarSeparator.ToLower().Equals("after")){
+							mf.MainFrameUI.ToolStrip.Items.Add( ptsb );
+							mf.MainFrameUI.ToolStrip.Items.Add( new ToolStripSeparator() );
+						}else{
+							mf.MainFrameUI.ToolStrip.Items.Add( ptsb );
+						}
+					}catch(Exception ex){
+						DialogUtils.ShowError(mf, ex);
+					}
+				}
+			}
+		}
+		
+		/// <summary>
+		/// generate plugins menu structure according to their config
+		/// if no config add to default 'plugin' menu
+		/// </summary>
+		private void GeneratePluginMenus(){
+			foreach(IPlugin p in mf.PluginHost.Plugins){
+				string menuName = "";
+				string subMenuName = "";
+				string entryName = "";
+				
+				if(p.PluginConfigElement.Menu.CompareTo("")!=0){
+					menuName = p.PluginConfigElement.Menu;
+				}else{
+					DialogUtils.ShowError(mf, "Error", "Atrybut Menu w konfiguracji plugina "+ p.GetType()+" jest pusty!");
+				}
+				
+				subMenuName = p.PluginConfigElement.Submenu;
+				entryName = p.PluginConfigElement.MenuEntry;
+				
+				//if menu item does not exist create it
+				if(mf.MainFrameUI.MainMenuStrip.Items[menuName]==null){
+					ToolStripMenuItem tsmiMenu = new ToolStripMenuItem(menuName);
+					tsmiMenu.Name = menuName;
+					mf.MainFrameUI.MainMenuStrip.Items.Add(tsmiMenu);
+				}
+				
+				//if submen menu item does not exist create it
+				if(subMenuName.Length>0 &&
+				   ((ToolStripMenuItem)mf.MainFrameUI.MainMenuStrip.Items[menuName]).DropDownItems[subMenuName]==null){
+					ToolStripMenuItem tsmiMenu = (ToolStripMenuItem)mf.MainFrameUI.MainMenuStrip.Items[menuName];
+					ToolStripMenuItem tsmiSubMenu = new ToolStripMenuItem(subMenuName);
+					tsmiSubMenu.Name = subMenuName;
+					((ToolStripMenuItem)mf.MainFrameUI.MainMenuStrip.Items[menuName]).DropDownItems.Add(tsmiSubMenu);	
+				}
+
+				//create pluginmenuitem checking for MenuSeparator property in config
+				if(subMenuName.Length>0){
+					PluginMenuItem pmi = new PluginMenuItem(p);
+					pmi.Text = (entryName.CompareTo("")==0)?p.Name:p.PluginConfigElement.MenuEntry;
+					pmi.Click += new EventHandler(pluginSelected);
+					if(p.PluginConfigElement.MenuSeparator != null && p.PluginConfigElement.MenuSeparator.ToLower().Equals("before")){
+						ToolStripSeparator tss = new ToolStripSeparator();
+						((ToolStripMenuItem)((ToolStripMenuItem)mf.MainFrameUI.MainMenuStrip.Items[menuName]).DropDownItems[subMenuName]).DropDownItems.Add(tss);
+						((ToolStripMenuItem)((ToolStripMenuItem)mf.MainFrameUI.MainMenuStrip.Items[menuName]).DropDownItems[subMenuName]).DropDownItems.Add(pmi);
+					}else if(p.PluginConfigElement.MenuSeparator != null && p.PluginConfigElement.MenuSeparator.ToLower().Equals("after")){
+						ToolStripSeparator tss = new ToolStripSeparator();
+						((ToolStripMenuItem)((ToolStripMenuItem)mf.MainFrameUI.MainMenuStrip.Items[menuName]).DropDownItems[subMenuName]).DropDownItems.Add(pmi);
+						((ToolStripMenuItem)((ToolStripMenuItem)mf.MainFrameUI.MainMenuStrip.Items[menuName]).DropDownItems[subMenuName]).DropDownItems.Add(tss);
+					}else{
+						((ToolStripMenuItem)((ToolStripMenuItem)mf.MainFrameUI.MainMenuStrip.Items[menuName]).DropDownItems[subMenuName]).DropDownItems.Add(pmi);
+					}
+				}else{
+					PluginMenuItem pmi = new PluginMenuItem(p);
+					pmi.Text = (entryName.CompareTo("")==0)?p.Name:p.PluginConfigElement.MenuEntry;
+					pmi.Click += new EventHandler(pluginSelected);
+					if(p.PluginConfigElement.MenuSeparator != null && p.PluginConfigElement.MenuSeparator.ToLower().Equals("before")){
+						ToolStripSeparator tss = new ToolStripSeparator();
+						((ToolStripMenuItem)mf.MainFrameUI.MainMenuStrip.Items[menuName]).DropDownItems.Add(tss);
+						((ToolStripMenuItem)mf.MainFrameUI.MainMenuStrip.Items[menuName]).DropDownItems.Add(pmi);
+					}else if(p.PluginConfigElement.MenuSeparator != null && p.PluginConfigElement.MenuSeparator.ToLower().Equals("after")){
+						ToolStripSeparator tss = new ToolStripSeparator();
+						((ToolStripMenuItem)mf.MainFrameUI.MainMenuStrip.Items[menuName]).DropDownItems.Add(pmi);
+						((ToolStripMenuItem)mf.MainFrameUI.MainMenuStrip.Items[menuName]).DropDownItems.Add(tss);
+					}else{
+						((ToolStripMenuItem)mf.MainFrameUI.MainMenuStrip.Items[menuName]).DropDownItems.Add(pmi);
+					}
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Generate "View" menu, containing all activated IViewPlugin plugins.
+		/// While generating, check for current active plugin and 'check' it.
+		/// </summary>
+		private void generateMenu(){
+			mf.MainFrameUI.ViewMenuEntry.DropDownItems.Clear();
+			foreach(IPlugin vp in mf.PluginHost.ActivePlugins){
+				PluginMenuItem pmi = new PluginMenuItem(vp);
+				if(vp.Equals(focusedViewPlugin)){
+					pmi.Checked = true;
+				}
+				pmi.Text = (vp.PluginConfigElement.MenuEntry.CompareTo("")==0)?vp.Name:vp.PluginConfigElement.MenuEntry;
+				pmi.Click += new EventHandler(pluginSelected);
+				mf.MainFrameUI.ViewMenuEntry.DropDownItems.Add(pmi);
+			}
+		}
+		
+		/// <summary>
+		/// remove plugin from...?? fak co ja tutaj chciałem zrobić?:):P
+		/// </summary>
+		/// <param name="vp"></param>
+		public void removePlugin(IViewPlugin vp){
+			if(vp==null){
+				//remove current plugin
+			}else{
+				//remove given plugin
+				
+			}
+		}
+	}
+}

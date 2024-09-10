@@ -1,0 +1,99 @@
+﻿/*
+ * Created by SharpDevelop.
+ * User: Pablo
+ * Date: 2008-02-07
+ * Time: 20:24
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
+using System.Configuration;
+using System.Collections.Generic;
+
+///
+/// Dodaj referencje do execa / projektu Solarium (np.: kliknij prawym na folderze projektu w
+/// drzewku rozwiazania, opcja: dodaj referencje, zakladka projekty - wybierz solarium:)
+///
+using Solarium;
+using Solarium.Frame;
+using Solarium.Plugin;
+using Solarium.Settings;
+
+using DBConstructorPlugin.Gui;
+
+namespace DBConstructorPlugin
+{
+	/// <summary>
+	/// Description of DBConstructorPlugin.
+	/// </summary>
+	public class DBConstructorPlugin : IPlugin
+	{
+		private IMainFrame mf = null;
+		private PluginConfigElement pluginConfigElement = new PluginConfigElement();
+		private string pluginName = "DBConstructorPlugin";
+		private string pluginDesc = "Description of DBConstructorPlugin";
+		private string pluginAuth = "Pablo";
+		private string pluginVer = "0.1";
+
+		public string Name {
+			get {
+				return pluginName;
+			}
+		}
+
+		public string Description {
+			get {
+				return pluginDesc;
+			}
+		}
+
+		public string Author {
+			get {
+				return pluginAuth;
+			}
+		}
+
+		public string Version {
+			get {
+				return pluginVer;
+			}
+		}
+
+		public PluginConfigElement PluginConfigElement {
+			get {
+				return pluginConfigElement;
+			}
+			set {
+				this.pluginConfigElement = value;
+			}
+		}
+
+		public void Initialize(IMainFrame mf)
+		{
+			this.mf = mf;
+
+			pluginConfigElement.Type = this.GetType().Name;
+			pluginConfigElement.Menu = "Plugins";
+			pluginConfigElement.Submenu = "";
+			pluginConfigElement.MenuEntry = "DBConstructorPlugin";
+			pluginConfigElement.ToolbarImage = "./images/toolbar/DBConstructor.png";
+		}
+
+		public void Activate()
+		{
+			MainForm form = new MainForm(mf);
+			form.Show();
+		}
+
+		public void Unactivate()
+		{
+			//throw new NotImplementedException();
+		}
+
+		public void Dispose()
+		{
+			//throw new NotImplementedException();
+		}		
+	}
+	
+}

@@ -1,0 +1,14 @@
+..\Solarium\bin\Debug\plugins\DBConsolePlugin.dll
+..\Solarium\bin\Debug\plugins\DBConsolePlugin.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DBConsolePlugin.DBConsoleView.resources
+obj\Debug\DBConsolePlugin.TableForm.resources
+obj\Debug\DBConsolePlugin.csproj.GenerateResource.Cache
+obj\Debug\DBConsolePlugin.dll
+obj\Debug\DBConsolePlugin.pdb
+bin\Release\DBConsolePlugin.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\DBConsolePlugin.DBConsoleView.resources
+obj\Release\DBConsolePlugin.TableForm.resources
+obj\Release\DBConsolePlugin.csproj.GenerateResource.Cache
+obj\Release\DBConsolePlugin.dll

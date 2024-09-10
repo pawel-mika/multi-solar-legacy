@@ -1,0 +1,101 @@
+﻿/*
+ * Created by SharpDevelop.
+ * User: Pablo
+ * Date: 2007-09-17
+ * Time: 23:06
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
+using System.Collections.Generic;
+
+using Solarium;
+using Solarium.Config;
+using Solarium.Frame;
+using Solarium.Plugin;
+using Solarium.Settings;
+using Solarium.Db;
+using Solarium.Utils;
+
+namespace DBLoggerPlugin
+{
+	/// <summary>
+	/// Description of MyClass.
+	/// </summary>
+	public class DBLoggerPlugin : IViewPlugin
+	{
+		private DBLoggerView pluginView = null;
+		private IMainFrame mf = null;
+		private PluginConfigElement pluginConfigElement = new PluginConfigElement();
+		
+		public System.Windows.Forms.Control View {
+			get {
+				return pluginView;
+			}
+		}
+		
+		public string Name {
+			get {
+				return "DBLogger";
+			}
+		}
+		
+		public string Description {
+			get {
+				return "Debug plugin for logging\nbasic sql requests.";
+			}
+		}
+		
+		public string Author {
+			get {
+				return "Pablo";
+			}
+		}
+		
+		public string Version {
+			get {
+				return "0.0.1a";
+			}
+		}
+		
+		public void Initialize(IMainFrame mf)
+		{
+			this.mf = mf;
+			
+			pluginConfigElement.Type = this.GetType().Name;
+			pluginConfigElement.Menu = "Debug";
+			pluginConfigElement.Submenu = "";
+			pluginConfigElement.MenuEntry = "Database logger";
+			pluginConfigElement.ToolbarImage = "./images/toolbar/DBLogger.png";
+		}
+		
+		public void Activate()
+		{
+			pluginView = new DBLoggerView(mf);
+			mf.Database.RequestSent += new DatabaseEventHandler(databaseEvent);
+		}
+		
+		public void Unactivate()
+		{
+			mf.Database.RequestSent -= databaseEvent;
+		}
+		
+		public void Dispose()
+		{
+
+		}
+		
+		private void databaseEvent(object sender, DatabaseEventArgs dea){
+			pluginView.LogOnConsole(dea.Message+Environment.NewLine);
+		}
+		
+		public PluginConfigElement PluginConfigElement {
+			get {
+				return pluginConfigElement;
+			}
+			set {
+				this.pluginConfigElement = value;
+			}
+		}
+	}
+}

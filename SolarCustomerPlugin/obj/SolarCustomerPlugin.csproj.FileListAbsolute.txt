@@ -1,0 +1,16 @@
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\Solarium\bin\Debug\plugins\SolarCustomerPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\Solarium\bin\Debug\plugins\SolarCustomerPlugin.pdb
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\SolarCustomerPlugin\obj\Debug\ResolveAssemblyReference.cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.Gui.ClientSelectionForm.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.Gui.SCPMainForm.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.csproj.GenerateResource.Cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProject\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.pdb
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\SolarCustomerPlugin\obj\Debug\ResolveAssemblyReference.cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.Gui.ClientSelectionForm.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.Gui.SCPMainForm.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.csproj.GenerateResource.Cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.pdb
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\bin\Debug\plugins\SolarCustomerPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\bin\Debug\plugins\SolarCustomerPlugin.pdb

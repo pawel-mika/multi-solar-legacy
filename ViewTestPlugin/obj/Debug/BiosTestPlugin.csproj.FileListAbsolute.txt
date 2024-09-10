@@ -1,0 +1,7 @@
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\bin\Debug\plugins\BiosTestPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\Solarium\bin\Debug\plugins\BiosTestPlugin.pdb
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ViewTestPlugin\obj\Debug\ResolveAssemblyReference.cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ViewTestPlugin\obj\Debug\ViewTestPlugin.ViewTestPluginView.resources
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ViewTestPlugin\obj\Debug\BiosTestPlugin.csproj.GenerateResource.Cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ViewTestPlugin\obj\Debug\BiosTestPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ViewTestPlugin\obj\Debug\BiosTestPlugin.pdb

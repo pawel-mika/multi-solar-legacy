@@ -1,0 +1,8 @@
+..\Solarium\bin\Debug\plugins\RescanNetworkPlugin.dll
+..\Solarium\bin\Debug\plugins\RescanNetworkPlugin.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\RescanNetworkPlugin.dll
+obj\Debug\RescanNetworkPlugin.pdb
+bin\Release\RescanNetworkPlugin.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\RescanNetworkPlugin.dll

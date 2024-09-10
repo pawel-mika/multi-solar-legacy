@@ -1,0 +1,5 @@
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\NoNetworkControlPlugin\bin\Debug\NoNetworkControlPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\NoNetworkControlPlugin\bin\Debug\NoNetworkControlPlugin.pdb
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\NoNetworkControlPlugin\obj\Debug\ResolveAssemblyReference.cache
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\NoNetworkControlPlugin\obj\Debug\NoNetworkControlPlugin.dll
+D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\NoNetworkControlPlugin\obj\Debug\NoNetworkControlPlugin.pdb

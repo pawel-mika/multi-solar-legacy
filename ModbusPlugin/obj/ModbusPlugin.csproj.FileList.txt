@@ -1,0 +1,14 @@
+..\Solarium\bin\Debug\plugins\ModbusPlugin.dll
+..\Solarium\bin\Debug\plugins\ModbusPlugin.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ModbusPlugin.PluginMainForm.resources
+obj\Debug\ModbusPlugin.NetworkScanForm.resources
+obj\Debug\ModbusPlugin.csproj.GenerateResource.Cache
+obj\Debug\ModbusPlugin.dll
+obj\Debug\ModbusPlugin.pdb
+bin\Release\ModbusPlugin.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\ModbusPlugin.PluginMainForm.resources
+obj\Release\ModbusPlugin.NetworkScanForm.resources
+obj\Release\ModbusPlugin.csproj.GenerateResource.Cache
+obj\Release\ModbusPlugin.dll
