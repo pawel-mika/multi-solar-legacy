@@ -1,4 +1,4 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <ProjectGuid>{DFC9A582-5D83-4F17-B501-1C96A86A9CA2}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -10,7 +10,13 @@
     <NoStdLib>False</NoStdLib>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>..\Solarium\bin\Debug\plugins\</OutputPath>
@@ -35,6 +41,12 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <FileAlignment>4096</FileAlignment>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
   <ItemGroup>
     <Reference Include="DOATransparentLabel">
@@ -56,15 +68,21 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Client.cs" />
-    <Compile Include="Gui\ClientSelectionForm.cs" />
+    <Compile Include="Gui\ClientSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Gui\ClientSelectionForm.Designer.cs">
       <DependentUpon>ClientSelectionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\SCPMainForm.cs" />
+    <Compile Include="Gui\SCPMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Gui\SCPMainForm.Designer.cs">
       <DependentUpon>SCPMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\SDCListView.cs" />
+    <Compile Include="Gui\SDCListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SolarCustomerPlugin.cs" />
     <EmbeddedResource Include="Gui\ClientSelectionForm.resx">
       <DependentUpon>ClientSelectionForm.cs</DependentUpon>
@@ -79,6 +97,5 @@
       <Name>Solarium</Name>
       <Private>False</Private>
     </ProjectReference>
-    <Folder Include="Gui" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,7 @@
+.vs
+.history
+/Solarium/packages
+/Solarium/Backup
+**/obj
+**/bin
+**/Debug

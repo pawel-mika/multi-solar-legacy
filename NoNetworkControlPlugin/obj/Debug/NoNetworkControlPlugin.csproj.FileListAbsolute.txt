@@ -3,3 +3,9 @@ D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\NoNetworkControlPl
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\NoNetworkControlPlugin\obj\Debug\ResolveAssemblyReference.cache
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\NoNetworkControlPlugin\obj\Debug\NoNetworkControlPlugin.dll
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\NoNetworkControlPlugin\obj\Debug\NoNetworkControlPlugin.pdb
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\NoNetworkControlPlugin\bin\Debug\NoNetworkControlPlugin.dll
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\NoNetworkControlPlugin\bin\Debug\NoNetworkControlPlugin.pdb
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\NoNetworkControlPlugin\obj\Debug\NoNetworkControlPlugin.csproj.AssemblyReference.cache
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\NoNetworkControlPlugin\obj\Debug\NoNetworkControlPlugin.csproj.CoreCompileInputs.cache
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\NoNetworkControlPlugin\obj\Debug\NoNetworkControlPlugin.dll
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\NoNetworkControlPlugin\obj\Debug\NoNetworkControlPlugin.pdb

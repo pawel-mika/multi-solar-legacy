@@ -1,4 +1,4 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <ProjectGuid>{42314503-D4C8-4482-B6AB-E24A7443CE95}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -10,7 +10,13 @@
     <NoStdLib>False</NoStdLib>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>..\Solarium\bin\Debug\plugins\</OutputPath>
@@ -35,6 +41,12 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <FileAlignment>4096</FileAlignment>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
   <ItemGroup>
     <Reference Include="System" />
@@ -46,19 +58,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Controls\BiosComponentTypeEdit.cs" />
+    <Compile Include="Controls\BiosComponentTypeEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\BiosComponentTypeEdit.Designer.cs">
       <DependentUpon>BiosComponentTypeEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\DBField.cs" />
+    <Compile Include="Controls\DBField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\DBField.Designer.cs">
       <DependentUpon>DBField.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\IEditor.cs" />
     <Compile Include="DBConstructorPlugin.cs" />
     <Compile Include="Gui\BiosTreeNode.cs" />
-    <Compile Include="Gui\BiosTreeView.cs" />
-    <Compile Include="Gui\MainForm.cs" />
+    <Compile Include="Gui\BiosTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Gui\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
@@ -78,7 +98,5 @@
       <Name>Solarium</Name>
       <Private>False</Private>
     </ProjectReference>
-    <Folder Include="Gui" />
-    <Folder Include="Controls" />
   </ItemGroup>
 </Project>

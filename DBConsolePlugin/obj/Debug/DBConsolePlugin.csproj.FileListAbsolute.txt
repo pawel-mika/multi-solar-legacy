@@ -6,3 +6,12 @@ D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBConsolePlugin\ob
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBConsolePlugin\obj\Debug\DBConsolePlugin.csproj.GenerateResource.Cache
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBConsolePlugin\obj\Debug\DBConsolePlugin.dll
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\DBConsolePlugin\obj\Debug\DBConsolePlugin.pdb
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\Solarium\bin\Debug\plugins\DBConsolePlugin.dll
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\Solarium\bin\Debug\plugins\DBConsolePlugin.pdb
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\DBConsolePlugin\obj\Debug\DBConsolePlugin.csproj.AssemblyReference.cache
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\DBConsolePlugin\obj\Debug\DBConsolePlugin.DBConsoleView.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\DBConsolePlugin\obj\Debug\DBConsolePlugin.TableForm.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\DBConsolePlugin\obj\Debug\DBConsolePlugin.csproj.GenerateResource.cache
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\DBConsolePlugin\obj\Debug\DBConsolePlugin.csproj.CoreCompileInputs.cache
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\DBConsolePlugin\obj\Debug\DBConsolePlugin.dll
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\DBConsolePlugin\obj\Debug\DBConsolePlugin.pdb

@@ -5,3 +5,11 @@ D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ViewTestPlugin\obj
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ViewTestPlugin\obj\Debug\BiosTestPlugin.csproj.GenerateResource.Cache
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ViewTestPlugin\obj\Debug\BiosTestPlugin.dll
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ViewTestPlugin\obj\Debug\BiosTestPlugin.pdb
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\Solarium\bin\Debug\plugins\BiosTestPlugin.dll
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\Solarium\bin\Debug\plugins\BiosTestPlugin.pdb
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ViewTestPlugin\obj\Debug\BiosTestPlugin.csproj.AssemblyReference.cache
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ViewTestPlugin\obj\Debug\ViewTestPlugin.ViewTestPluginView.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ViewTestPlugin\obj\Debug\BiosTestPlugin.csproj.GenerateResource.cache
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ViewTestPlugin\obj\Debug\BiosTestPlugin.csproj.CoreCompileInputs.cache
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ViewTestPlugin\obj\Debug\BiosTestPlugin.dll
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ViewTestPlugin\obj\Debug\BiosTestPlugin.pdb

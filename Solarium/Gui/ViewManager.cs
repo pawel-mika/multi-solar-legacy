@@ -161,7 +161,7 @@ namespace Solarium.Gui
 		private void addPluginTab(BaseViewPlugin plug){
 			ViewPluginTabPage tp = new ViewPluginTabPage(plug, plug.Name);
 			tp.TabLeave += new TabChangedEventHandler(tabChanged);
-			tp.TabEnter += new TabChangedEventHandler(tabChanged);				
+			tp.TabEnter += new TabChangedEventHandler(tabChanged);
 			tp.Controls.Add(plug.View);
 			tp.Padding = Padding.Empty;
 			tp.Margin = Padding.Empty;

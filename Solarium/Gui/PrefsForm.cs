@@ -176,7 +176,7 @@ namespace Solarium.Gui
 				BasePlugin p = (BasePlugin)lbPluginList.SelectedItem;
 				lNameVal.Text = p.Name;
 				lAuthorVal.Text = p.Author;
-				lVersionVal.Text = p.Version;	
+				lVersionVal.Text = p.Version;
 				lDescVal.Text = p.Description;
 			}catch(Exception ex){
 				Solarium.Utils.DialogUtils.ShowError(mf,"Error",ex.Message);

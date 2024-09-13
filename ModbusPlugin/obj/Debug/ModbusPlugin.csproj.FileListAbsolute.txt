@@ -14,3 +14,20 @@ D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\D
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.csproj.GenerateResource.Cache
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.dll
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\ModbusPlugin\obj\Debug\ModbusPlugin.pdb
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\Solarium\bin\Debug\plugins\ModbusPlugin.dll
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\Solarium\bin\Debug\plugins\ModbusPlugin.pdb
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.csproj.AssemblyReference.cache
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.Bed2Slave.Bed2SlaveControl.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.XMLConfig.XMLConfig.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.LoadTestControl.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.PluginMainForm.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.NetworkScanForm.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.SlaveControls.DiagnosticControl.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.SlaveControls.SCoilStatusControl.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.SlaveControls.SCommStatusControl.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.SlaveControls.SConfigControl.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.SlaveLoadStatus.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.csproj.GenerateResource.cache
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.csproj.CoreCompileInputs.cache
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.dll
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\ModbusPlugin\obj\Debug\ModbusPlugin.pdb

@@ -6,3 +6,12 @@ D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\SolarCustomerPlugi
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.csproj.GenerateResource.Cache
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.dll
 D:\Moje Dokumenty\SharpDevelop Projects\SolariumProjectNet3.5\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.pdb
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\Solarium\bin\Debug\plugins\SolarCustomerPlugin.dll
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\Solarium\bin\Debug\plugins\SolarCustomerPlugin.pdb
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.csproj.AssemblyReference.cache
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.Gui.ClientSelectionForm.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.Gui.SCPMainForm.resources
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.csproj.GenerateResource.cache
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.csproj.CoreCompileInputs.cache
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.dll
+C:\cygwin64\home\pmi\workspace\multi-solar-legacy\SolarCustomerPlugin\obj\Debug\SolarCustomerPlugin.pdb

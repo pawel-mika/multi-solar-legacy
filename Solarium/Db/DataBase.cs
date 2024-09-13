@@ -23,6 +23,7 @@ using Solarium.Frame;
 using Solarium.Settings;
 using Solarium.Utils;
 using Solarium.Bios;
+using Microsoft.Data.Sqlite;
 
 namespace Solarium.Db
 {
@@ -58,7 +59,7 @@ namespace Solarium.Db
 		private System.Timers.Timer connectionKeeperTimer = null;
 		private System.Timers.Timer connectionCheckerTimer = null;
 		
-		private OdbcConnection localConnection = null;
+		private SqliteConnection localConnection = null;
 		private string localConnectionString = "";
 		
 		private DBConfigSettings dbConfigSettings;
@@ -187,7 +188,7 @@ namespace Solarium.Db
 		/// <summary>
 		/// start local connection
 		/// </summary>
-		private void startLocalConnection(){
+		private void __startLocalConnection(){
 			#if (DEBUG)
 			log4net.LogManager.GetLogger("Database").Info("Initializing local connection...");
 			#endif
@@ -200,8 +201,8 @@ namespace Solarium.Db
 					"PORT="			+	localConnPort	+	"; " +
 					"UID="			+	localConnUser	+	"; " +
 					"PASSWORD="		+	localConnPass	+	"; ";
-				localConnection = new OdbcConnection(localConnectionString);
-				localConnection.Open();
+				//localConnection = new OdbcConnection(localConnectionString);
+				//localConnection.Open();
 			}catch (TimeoutException){
 				#if (DEBUG)
 				log4net.LogManager.GetLogger("Database").Fatal("Timeout while initialising remote connection...");
@@ -222,6 +223,17 @@ namespace Solarium.Db
 			log4net.LogManager.GetLogger("Database").Info("Local connection initialized!");
 			#endif
 		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		private void startLocalConnection()
+		{
+			using (localConnection = new SqliteConnection("Data Source=multisolar.db"))
+			{
+				localConnection.Open();
+			}
+        }
 		
 		/// <summary>
 		/// Start remote connection keeper timer
